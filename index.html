@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Statutory Provisions Against Piracy, Cyber Crimes and Hacking</title>
+  <meta name="description" content="An interactive educational web platform on Indian statutory provisions under the IT Act 2000 and Copyright Act 1957 covering cybercrimes, hacking, digital piracy, case studies, quizzes, and safety guides." />
+  
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:title" content="Statutory Provisions Against Piracy, Cyber Crimes and Hacking" />
+  <meta property="og:description" content="An interactive educational web platform on Indian statutory provisions under the IT Act 2000 and Copyright Act 1957 covering cybercrimes, hacking, digital piracy, case studies, quizzes, and safety guides." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Clean Vanilla Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-brand">
+        <div class="brand-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">CyberStatute India</span>
+          <span class="brand-subtitle">Academic Legal Education Platform</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#categories" class="nav-link">Cybercrimes</a></li>
+          <li><a href="#laws" class="nav-link">Statutory Laws</a></li>
+          <li><a href="#cases" class="nav-link">Case Studies</a></li>
+          <li><a href="#quiz" class="nav-link">Quiz</a></li>
+          <li><a href="#safety" class="nav-link">Safety Guide</a></li>
+          <li><a href="#references" class="nav-link">References</a></li>
+          <li><a href="#about" class="nav-link">About Project</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#incident-simulator" class="btn-report-nav">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+          <span>Simulate Incident</span>
+        </a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Body -->
+  <main>
+
+    <!-- SECTION 1: HOME / HERO -->
+    <section class="hero-section" id="home">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <div class="hero-badge-wrap">
+              <span class="academic-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                College Engineering Micro-Project
+              </span>
+              <span class="jurisdiction-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                Jurisdiction: Republic of India
+              </span>
+            </div>
+
+            <!-- Exact Project Title Preserved -->
+            <h1 class="hero-title">
+              Statutory Provisions Against Piracy, <span class="highlight">Cyber Crimes</span> and Hacking
+            </h1>
+
+            <p class="hero-description">
+              An interactive educational portal engineered to cultivate legal literacy, cybersecurity awareness, and professional computing ethics. Explore authentic statutory provisions under the <strong>Information Technology Act, 2000</strong> and the <strong>Copyright Act, 1957</strong> through interactive case analyses, verified statutes, self-evaluation quizzes, and incident triage simulations.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#laws" class="btn-primary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                <span>Explore Indian Cyber Laws</span>
+              </a>
+              <a href="#cases" class="btn-secondary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                <span>Analyze Case Studies</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Graphic Card -->
+          <div class="hero-graphic-card">
+            <div class="shield-display">
+              <div class="shield-icon-wrapper" aria-hidden="true">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>
+              </div>
+              <h2 class="shield-title">Statutory Compliance Shield</h2>
+              <p class="shield-subtitle">Verified against Official India Code Legislation</p>
+            </div>
+
+            <div class="stat-pills-list">
+              <div class="stat-row">
+                <span class="stat-row-label">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  IT Act, 2000 (Act No. 21 of 2000)
+                </span>
+                <span class="stat-row-value">Sec 43, 66, 66C, 66D, 70</span>
+              </div>
+              <div class="stat-row">
+                <span class="stat-row-label">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Copyright Act, 1957 (Act No. 14 of 1957)
+                </span>
+                <span class="stat-row-value">Sec 14, 51, 52, 63, 63B</span>
+              </div>
+              <div class="stat-row">
+                <span class="stat-row-label">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  National Cyber Helpline (MHA)
+                </span>
+                <span class="stat-row-value" style="color:#fbbf24;">Dial 1930</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Navigation Cards Grid -->
+        <div class="nav-cards-grid">
+          <a href="#categories" class="nav-card">
+            <div class="nav-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+            </div>
+            <div class="nav-card-title">Cybercrime Categories</div>
+            <div class="nav-card-desc">7 distinct crime classifications with real-world examples and remedies.</div>
+          </a>
+          <a href="#laws" class="nav-card">
+            <div class="nav-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"></path><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"></path><path d="M7 21h10"></path><path d="M12 3v18"></path><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"></path></svg>
+            </div>
+            <div class="nav-card-title">Indian Cyber Law</div>
+            <div class="nav-card-desc">Detailed analysis of IT Act & Copyright Act civil and penal provisions.</div>
+          </a>
+          <a href="#cases" class="nav-card">
+            <div class="nav-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+            <div class="nav-card-title">Case Studies & Quiz</div>
+            <div class="nav-card-desc">Test your legal deduction across 5 realistic dilemmas and a 12-question quiz.</div>
+          </a>
+          <a href="#incident-simulator" class="nav-card">
+            <div class="nav-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+            </div>
+            <div class="nav-card-title">Incident Simulator</div>
+            <div class="nav-card-desc">Educational local incident triage docket generator with printable summary.</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- VERIFIED OFFICIAL STATISTICS BANNER (NCRB & CERT-In Supported) -->
+    <section class="stats-banner" aria-label="Official Indian Cybercrime Statistics">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">65,893</div>
+            <div class="stat-label">Cybercrime Cases Registered (2022)</div>
+            <div class="stat-source">Source: <a href="https://ncrb.gov.in" target="_blank" rel="noopener noreferrer">NCRB Crime in India Report 2022</a> (+24.4% YoY)</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">69.8%</div>
+            <div class="stat-label">Cases Driven by Fraud & Cheating</div>
+            <div class="stat-source">Primary Motive: Financial Fraud (IT Act Sec 66D)</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">13.9 Lakh</div>
+            <div class="stat-label">Cyber Security Incidents Handled</div>
+            <div class="stat-source">Source: <a href="https://www.cert-in.org.in" target="_blank" rel="noopener noreferrer">CERT-In Annual Tracking (2022)</a></div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">₹5 Crore</div>
+            <div class="stat-label">Max Civil Compensation Limit</div>
+            <div class="stat-source">Adjudicating Officer under IT Act Sec 43/46</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: GLOBAL SEARCH & FILTER CONTROLS -->
+    <section class="section" style="padding-bottom: 2rem;">
+      <div class="container">
+        <div class="search-filter-panel">
+          <div class="search-box-row">
+            <div class="search-input-wrapper">
+              <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              <input type="search" id="globalSearchInput" class="search-input" placeholder="Search by crime name, section (e.g. 66, 43, 63B), law, or keyword (phishing, torrent, piracy)..." />
+            </div>
+            <button type="button" class="btn-secondary" onclick="resetSearchAndFilters()">
+              Clear Filter
+            </button>
+          </div>
+
+          <div class="filter-pills-row">
+            <span class="filter-label">Filter Category:</span>
+            <button type="button" class="filter-btn active" data-filter="all">All Modules</button>
+            <button type="button" class="filter-btn" data-filter="piracy">Software Piracy</button>
+            <button type="button" class="filter-btn" data-filter="hacking">Hacking & Intrusion</button>
+            <button type="button" class="filter-btn" data-filter="cybercrime">Cybercrime & Data Theft</button>
+            <button type="button" class="filter-btn" data-filter="identity">Identity Theft & Fraud</button>
+          </div>
+
+          <div class="search-results-info">
+            <span id="searchResultCount">Showing all 7 crime categories and 10 statutory provisions</span>
+            <span style="font-size:0.8rem; color:var(--accent-cyan-light);">Updated against India Code official gazette</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: CYBERCRIME CATEGORIES -->
+    <section class="section section-alt" id="categories">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Module 01 &bull; Taxonomy & Analysis</span>
+          <h2 class="section-title">Cybercrime Categories & Real-World Impacts</h2>
+          <p class="section-subtitle">
+            A comprehensive educational taxonomy detailing cyber violations under Indian jurisprudence. Each category breaks down technical mechanisms, realistic fictional scenarios, organizational impacts, and statutory provisions.
+          </p>
+        </div>
+
+        <div class="crimes-grid" id="crimesGrid">
+          <!-- Dynamically populated by script.js -->
+        </div>
+
+        <!-- SPECIAL CALLOUT: Authorized Ethical Hacking vs Unauthorized Intrusion -->
+        <div class="ethical-callout">
+          <div class="callout-icon" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 12l2 2 4-4"></path></svg>
+          </div>
+          <div class="callout-content">
+            <h4>Critical Legal Boundary: Ethical Security Testing vs. Criminal Hacking</h4>
+            <p>
+              In computing jurisprudence, <strong>not all hacking is unlawful</strong>. Authorized cybersecurity professionals (often referred to as ethical hackers or penetration testers) identify system vulnerabilities to improve defensive posture. However, Indian law draws an absolute, unyielding line at <strong>prior authorization and defined scope</strong>. Testing systems without explicit written consent from the owner constitutes an actionable violation under Section 43 and Section 66 of the IT Act, regardless of benevolent intent. Security researchers must operate strictly within formal Vulnerability Disclosure Programs (VDPs) or contractual Statements of Work (SoW).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: INDIAN CYBER LAW (STATUTORY PROVISIONS) -->
+    <section class="section" id="laws">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Module 02 &bull; Statutory Jurisprudence</span>
+          <h2 class="section-title">Indian Cyber Law & Statutory Provisions</h2>
+          <p class="section-subtitle">
+            Authoritative breakdown of the <strong>Information Technology Act, 2000</strong> and the <strong>Copyright Act, 1957</strong>. Verified directly against official India Code repositories.
+          </p>
+        </div>
+
+        <!-- Laws Tabs -->
+        <div class="laws-tabs-wrapper">
+          <div class="laws-tabs">
+            <button type="button" class="law-tab-btn active" data-law-tab="all">All Provisions</button>
+            <button type="button" class="law-tab-btn" data-law-tab="itact">IT Act, 2000</button>
+            <button type="button" class="law-tab-btn" data-law-tab="copyright">Copyright Act, 1957</button>
+            <button type="button" class="law-tab-btn" data-law-tab="criminal">Criminal Offences (Penal)</button>
+            <button type="button" class="law-tab-btn" data-law-tab="civil">Civil Liabilities (Damages)</button>
+          </div>
+        </div>
+
+        <!-- Statutes List Container -->
+        <div class="statutes-list" id="statutesList">
+          <!-- Populated by script.js -->
+        </div>
+
+        <!-- Civil Liability vs Criminal Offences Comparison Table -->
+        <div class="comparison-card">
+          <div class="comparison-header">
+            <h3>Key Legal Distinction: Civil Liability vs. Criminal Offences</h3>
+            <p style="color:var(--text-secondary); max-width:700px; margin:0 auto; font-size:0.95rem;">
+              Understanding how Indian law distinguishes monetary compensation from criminal punitive detention across cyber and copyright infractions.
+            </p>
+          </div>
+
+          <div class="table-responsive">
+            <table class="legal-table" aria-label="Comparison between Civil Liability and Criminal Offences">
+              <thead>
+                <tr>
+                  <th scope="col">Parametric Dimension</th>
+                  <th scope="col">Civil Liability (e.g. IT Act Sec 43, Copyright Sec 51)</th>
+                  <th scope="col">Criminal Offence (e.g. IT Act Sec 66/66C/66D, Copyright Sec 63/63B)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row" style="color:#fff;">Primary Objective</th>
+                  <td>Restorative: Compensate the injured victim for wrongful financial loss or property damage.</td>
+                  <td>Punitive & Deterrent: Punish the wrongdoer via state sanction to preserve public order.</td>
+                </tr>
+                <tr>
+                  <th scope="row" style="color:#fff;">Forum & Adjudication</th>
+                  <td>IT Adjudicating Officer appointed under Section 46 of the IT Act (State IT Secretary rank) or Commercial Court.</td>
+                  <td>Court of Judicial Magistrate of First Class / Chief Metropolitan Magistrate / Sessions Court.</td>
+                </tr>
+                <tr>
+                  <th scope="row" style="color:#fff;">Standard of Proof</th>
+                  <td>Preponderance of probabilities (balance of evidence).</td>
+                  <td>Proof beyond reasonable doubt.</td>
+                </tr>
+                <tr>
+                  <th scope="row" style="color:#fff;">Mental Element (Mens Rea)</th>
+                  <td>Strict liability or negligence; dishonest criminal intent is not mandatory for civil compensation.</td>
+                  <td>Mandatory requirement of <em>dishonest</em> or <em>fraudulent</em> intent (mens rea).</td>
+                </tr>
+                <tr>
+                  <th scope="row" style="color:#fff;">Prescribed Sanctions</th>
+                  <td>Damages and compensation payable directly to the victim (up to ₹5 Crore under Section 43).</td>
+                  <td>Imprisonment (ranging from 7 days to 10 years) and statutory fines paid to the State Treasury.</td>
+                </tr>
+                <tr>
+                  <th scope="row" style="color:#fff;">Police Investigation Powers</th>
+                  <td>No police arrest; matter is decided via civil petition before the Adjudicating Officer.</td>
+                  <td>Police investigation, seizure powers under Section 78/64, and cognizable arrest where applicable.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: INTERACTIVE CASE STUDIES -->
+    <section class="section section-alt" id="cases">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Module 03 &bull; Practical Application</span>
+          <h2 class="section-title">Interactive Legal Case Studies</h2>
+          <p class="section-subtitle">
+            Evaluate five realistic fictional legal scenarios. Select the appropriate statutory provisions, submit your analysis, and examine the judicial rationale and educational limitations.
+          </p>
+        </div>
+
+        <div class="case-studies-container" id="caseStudiesContainer">
+          <!-- Dynamically injected by script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: INTERACTIVE QUIZ -->
+    <section class="section" id="quiz">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Module 04 &bull; Knowledge Evaluation</span>
+          <h2 class="section-title">Cyber Law & Ethics Assessment Quiz</h2>
+          <p class="section-subtitle">
+            Challenge your understanding of statutory penalties, copyright fair dealing, identity theft provisions, and professional cybersecurity standards.
+          </p>
+        </div>
+
+        <div class="quiz-wrapper">
+          <!-- Progress Bar -->
+          <div class="quiz-progress-bar-container" aria-hidden="true">
+            <div class="quiz-progress-bar" id="quizProgressBar"></div>
+          </div>
+
+          <!-- Active Question View -->
+          <div id="quizActiveView">
+            <div class="quiz-meta-header">
+              <span class="quiz-counter" id="quizCounter">Question 1 of 12</span>
+              <span class="quiz-live-score" id="quizLiveScore">Score: 0 / 0</span>
+            </div>
+
+            <h3 class="quiz-question-text" id="quizQuestionText">Loading quiz question...</h3>
+
+            <div class="quiz-options-grid" id="quizOptionsGrid">
+              <!-- Options populated dynamically -->
+            </div>
+
+            <div class="quiz-explanation-box" id="quizExplanation">
+              <!-- Explanation appears after answering -->
+            </div>
+
+            <div class="quiz-controls">
+              <span style="font-size:0.85rem; color:var(--text-muted);">Select an option to evaluate your answer</span>
+              <button type="button" class="btn-primary" id="quizNextBtn" onclick="nextQuizQuestion()" style="display:none;">
+                Next Question
+              </button>
+            </div>
+          </div>
+
+          <!-- Final Result View -->
+          <div class="quiz-result-view" id="quizResultView">
+            <div class="result-score-circle">
+              <div class="score-num" id="quizFinalScore">0</div>
+              <div class="score-total">out of 12</div>
+            </div>
+            <h3 class="result-verdict" id="quizVerdict">Assessment Complete</h3>
+            <p class="result-feedback" id="quizFeedback">Reviewing performance metrics...</p>
+            <button type="button" class="btn-primary" onclick="restartQuiz()">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg>
+              <span>Restart Quiz</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: CYBER SAFETY GUIDE -->
+    <section class="section section-alt" id="safety">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Module 05 &bull; Technical Prevention</span>
+          <h2 class="section-title">Cyber Safety & Digital Hygiene Guide</h2>
+          <p class="section-subtitle">
+            Essential technical and operational safeguards for students, software engineers, and internet users to prevent cyber incidents and adhere to licensing laws.
+          </p>
+        </div>
+
+        <div class="safety-grid">
+          <!-- Card 1: Password Hygiene -->
+          <article class="safety-card">
+            <div class="safety-card-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            </div>
+            <h3 class="safety-card-title">Password Hygiene & Entropy</h3>
+            <ul class="safety-tips-list">
+              <li class="safety-tip-item">
+                <span class="safety-check-icon">&#10003;</span>
+                <span>Adopt passphrases with 16+ characters combining 4-5 random dictionary words (high entropy).</span>
+              </li>
+              <li class="safety-tip-item">
+                <span class="safety-check-icon">&#10003;</span>
+                <span>Never reuse passwords across academic portals, corporate domains, and personal email.</span>
+              </li>
+              <li class="safety-tip-item">
+                <span class="safety-check-icon">&#10003;</span>
+                <span>Utilize end-to-end encrypted password managers (e.g., KeePass, Bitwarden) with zero-knowledge architecture.</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Card 2: Multi-Factor Authentication -->
+          <article class="safety-card">
+            <div class="safety-card-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <h3 class="safety-card-title">Multi-Factor Authentication (MFA)</h3>
+            <ul class="safety-tips-list">
+              <li class="safety-tip-item">
+                <span class="safety-check-icon">&#10003;</span>
+                <span>Prioritize Time-based One-Time Password (TOTP) authenticator apps over SMS-based OTPs, which are vulnerable to SIM swapping.</span>
+              </li>
+              <li class="safety-tip-item">
+                <span class="safety-check-icon">&#10003;</span>
+                <span>Deploy FIDO2 / WebAuthn physical hardware security keys (e.g. YubiKeys) for cryptographic phishing resistance.</span>
+              </li>
+              <li class="safety-tip-item">
+                <span class="safety-check-icon">&#10003;</span>
+                <span>Store backup recovery emergency codes in a secure, offline physical vault.</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Card 3: Software Licensing & Warez Risks -->
+          <article class="safety-card">
+            <div class="safety-card-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg>
+            </div>
+            <h3 class="safety-card-title">Software Licensing & Malware Vectors</h3>
+            <ul class="safety-tips-list">
+              <li class="safety-tip-item">
+                <span class="safety-check-icon">&#10003;</span>
+                <span>Avoid cracked software and keygens; independent cybersecurity analyses confirm >60% deliver infostealers or crypto-miners.</span>
+              </li>
+              <li class="safety-tip-item">
+                <span class="safety-check-icon">&#10003;</span>
+                <span>Embrace verified Free and Open-Source Software (FOSS) under MIT, Apache 2.0, or GNU GPL licenses (e.g., Blender, FreeCAD, GIMP).</span>
+              </li>
+              <li class="safety-tip-item">
+                <span class="safety-check-icon">&#10003;</span>
+                <span>Maintain compliance with Software Asset Management (SAM) to prevent institutional liability under Copyright Act Sec 63B.</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Card 4: Safe Downloads & Cryptographic Hashes -->
+          <article class="safety-card">
+            <div class="safety-card-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            </div>
+            <h3 class="safety-card-title">Safe Downloads & Integrity Verification</h3>
+            <ul class="safety-tips-list">
+              <li class="safety-tip-item">
+                <span class="safety-check-icon">&#10003;</span>
+                <span>Verify file integrity by calculating SHA-256 checksums (e.g. <code>Get-FileHash</code> in PowerShell) against vendor published digests.</span>
+              </li>
+              <li class="safety-tip-item">
+                <span class="safety-check-icon">&#10003;</span>
+                <span>Download packages solely through official repositories (HTTPS, package managers such as apt, winget, or official vendor domains).</span>
+              </li>
+              <li class="safety-tip-item">
+                <span class="safety-check-icon">&#10003;</span>
+                <span>Check code-signing digital certificates on downloaded executables before granting administrative UAC execution privileges.</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Card 5: Phishing Awareness -->
+          <article class="safety-card">
+            <div class="safety-card-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            </div>
+            <h3 class="safety-card-title">Phishing & Social Engineering</h3>
+            <ul class="safety-tips-list">
+              <li class="safety-tip-item">
+                <span class="safety-check-icon">&#10003;</span>
+                <span>Scrutinize sender domains for typo-squatting or punycode characters (e.g., <code>bɑnk.com</code> vs <code>bank.com</code>).</span>
+              </li>
+              <li class="safety-tip-item">
+                <span class="safety-check-icon">&#10003;</span>
+                <span>Beware of manufactured urgency: claims of immediate account cancellation, arrest threats, or lottery windfalls.</span>
+              </li>
+              <li class="safety-tip-item">
+                <span class="safety-check-icon">&#10003;</span>
+                <span>Always verify unusual payment requests out-of-band via trusted in-person or official departmental channels.</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Card 6: Digital Evidence Preservation -->
+          <article class="safety-card">
+            <div class="safety-card-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+            </div>
+            <h3 class="safety-card-title">Digital Evidence Preservation</h3>
+            <ul class="safety-tips-list">
+              <li class="safety-tip-item">
+                <span class="safety-check-icon">&#10003;</span>
+                <span>Export raw email headers (RFC 822 / .eml format) containing IP transit hops, SPF/DKIM validation, and timestamps.</span>
+              </li>
+              <li class="safety-tip-item">
+                <span class="safety-check-icon">&#10003;</span>
+                <span>Take full-screen screenshots displaying the system taskbar clock, browser address bar, and error dialogs.</span>
+              </li>
+              <li class="safety-tip-item">
+                <span class="safety-check-icon">&#10003;</span>
+                <span>Isolate the compromised system from local networks immediately without shutting off power (to preserve volatile RAM).</span>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: SIMULATED INCIDENT REPORT GENERATOR -->
+    <section class="section" id="incident-simulator">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Module 06 &bull; Simulation Tool</span>
+          <h2 class="section-title">Educational Incident Triage Simulator</h2>
+          <p class="section-subtitle">
+            Experience how cybersecurity incident responders and legal officers catalog and triage cyber incidents. Generate a structured first-incident assessment docket.
+          </p>
+        </div>
+
+        <div class="simulator-panel">
+          <!-- Prominent Simulation Warning -->
+          <div class="sim-warning-banner">
+            <svg class="sim-warning-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            <div>
+              <strong>LOCAL EDUCATIONAL SIMULATION ONLY:</strong> This interactive form runs entirely within your local browser. No data is transmitted across the internet, logged to any database, or sent to police authorities. <strong>Do NOT enter real personal identification numbers, passwords, bank accounts, or actual Aadhaar numbers.</strong> For real cybercrimes, use official portals linked in the references section.
+            </div>
+          </div>
+
+          <form id="incidentForm" onsubmit="handleIncidentSubmit(event)">
+            <div class="form-grid">
+              <div>
+                <label for="simIncidentType" class="form-label">Incident Classification <span class="req">*</span></label>
+                <select id="simIncidentType" class="form-select" required>
+                  <option value="">-- Select Incident Classification --</option>
+                  <option value="Phishing & Credential Theft Attempt">Phishing & Credential Theft Attempt</option>
+                  <option value="Unauthorized System Access / Breach">Unauthorized System Access / Breach</option>
+                  <option value="Software Piracy / License Circumvention">Software Piracy / License Circumvention</option>
+                  <option value="Online Impersonation & Social Profile Cloning">Online Impersonation & Social Profile Cloning</option>
+                  <option value="Ransomware / Malicious System Disruption">Ransomware / Malicious System Disruption</option>
+                  <option value="Corporate Data Theft & Exfiltration">Corporate Data Theft & Exfiltration</option>
+                </select>
+                <div class="form-help">Select the primary violation type under examination.</div>
+              </div>
+
+              <div>
+                <label for="simIncidentDate" class="form-label">Estimated Date & Time of Occurrence <span class="req">*</span></label>
+                <input type="datetime-local" id="simIncidentDate" class="form-input" required />
+                <div class="form-help">Chronological timestamps are critical for digital forensics chain of custody.</div>
+              </div>
+
+              <div>
+                <label for="simTargetEnv" class="form-label">Impacted Operating Environment <span class="req">*</span></label>
+                <select id="simTargetEnv" class="form-select" required>
+                  <option value="">-- Select Impacted Environment --</option>
+                  <option value="Academic Institution Lab / University Network">Academic Institution Lab / University Network</option>
+                  <option value="Personal Student Laptop / Home Computer">Personal Student Laptop / Home Computer</option>
+                  <option value="Enterprise / Corporate Cloud Infrastructure">Enterprise / Corporate Cloud Infrastructure</option>
+                  <option value="Mobile Device / Cellular Communication">Mobile Device / Cellular Communication</option>
+                  <option value="Critical Public Infrastructure Server">Critical Public Infrastructure Server</option>
+                </select>
+                <div class="form-help">Defines the organizational boundary and regulatory scope.</div>
+              </div>
+
+              <div>
+                <label for="simIoC" class="form-label">Suspected Indicators of Compromise (IoCs)</label>
+                <input type="text" id="simIoC" class="form-input" placeholder="e.g. SHA-256 hash, suspicious URL domain, spoofed sender IP, rogue port" />
+                <div class="form-help">Optional technical forensic markers (domain, IP, or hash).</div>
+              </div>
+
+              <div class="form-group-full">
+                <label for="simDescription" class="form-label">Incident Narrative & Observations <span class="req">*</span></label>
+                <textarea id="simDescription" class="form-textarea" placeholder="Detail the simulated sequence of events: what triggered the alert, which systems were affected, and observed system abnormalities..." required></textarea>
+                <div class="form-help">Describe factual technical observations without speculative accusations.</div>
+              </div>
+
+              <div class="form-group-full">
+                <label for="simActionTaken" class="form-label">Recommended Immediate Containment Action <span class="req">*</span></label>
+                <textarea id="simActionTaken" class="form-textarea" placeholder="e.g. Disconnected infected subnet from VLAN, revoked compromised Kerberos tokens, preserved memory dump, updated firewall ACL rules..." required></textarea>
+                <div class="form-help">Document containment procedures implemented or recommended.</div>
+              </div>
+            </div>
+
+            <div style="display:flex; justify-content:flex-end; gap:1rem;">
+              <button type="button" class="btn-secondary" onclick="resetIncidentForm()">Clear Form</button>
+              <button type="submit" class="btn-primary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Generate Triage Docket</span>
+              </button>
+            </div>
+          </form>
+
+          <!-- Dynamic Output Preview Area -->
+          <div class="report-preview-container" id="reportPreviewArea">
+            <!-- Docket rendered dynamically by script.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 9: STATUTORY REFERENCES & GOVERNMENT RESOURCES -->
+    <section class="section section-alt" id="references">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Module 07 &bull; Authoritative Portals</span>
+          <h2 class="section-title">Statutory References & Official Portals</h2>
+          <p class="section-subtitle">
+            Direct gateways to official India Code digital gazettes, national cyber reporting helplines, and government CERT-In incident handling guidelines.
+          </p>
+        </div>
+
+        <div class="ref-links-grid">
+          <a href="https://www.indiacode.nic.in/handle/123456789/1999" target="_blank" rel="noopener noreferrer" class="ref-card">
+            <div class="ref-card-header">
+              <span class="ref-tag">Official Gazette</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </div>
+            <div class="ref-title">Information Technology Act, 2000</div>
+            <div class="ref-desc">Full verified legislative text of Act No. 21 of 2000 including 2008 amendments on India Code portal.</div>
+          </a>
+
+          <a href="https://www.indiacode.nic.in/handle/123456789/1367" target="_blank" rel="noopener noreferrer" class="ref-card">
+            <div class="ref-card-header">
+              <span class="ref-tag">Official Gazette</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </div>
+            <div class="ref-title">The Copyright Act, 1957</div>
+            <div class="ref-desc">Official text of Act No. 14 of 1957 detailing Section 14 computer programmes, Section 51 infringement, and Section 63/63B penalties.</div>
+          </a>
+
+          <a href="https://cybercrime.gov.in" target="_blank" rel="noopener noreferrer" class="ref-card">
+            <div class="ref-card-header">
+              <span class="ref-tag">National Portal</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </div>
+            <div class="ref-title">National Cyber Crime Reporting Portal</div>
+            <div class="ref-desc">Official Government of India portal (MHA) for citizens to register cybercrime complaints and financial fraud reports (Helpline: 1930).</div>
+          </a>
+
+          <a href="https://www.cert-in.org.in" target="_blank" rel="noopener noreferrer" class="ref-card">
+            <div class="ref-card-header">
+              <span class="ref-tag">Nodal Agency</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </div>
+            <div class="ref-title">Indian Computer Emergency Response Team (CERT-In)</div>
+            <div class="ref-desc">National agency for incident response under Section 70B of IT Act, publishing security advisories and incident guidelines.</div>
+          </a>
+        </div>
+
+        <!-- Prominent Non-Legal Advice Disclaimer Card -->
+        <div class="disclaimer-card">
+          <div class="disclaimer-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+          </div>
+          <div class="disclaimer-text">
+            <h4>Academic & Informational Disclaimer</h4>
+            <p>
+              This website was developed as an academic college micro-project for educational legal awareness, computing curriculum enrichment, and professional ethics education. <strong>The contents do not constitute formal legal advice</strong>, nor do they establish an attorney-client relationship. Statutory provisions, court jurisprudence, and administrative regulations are subject to ongoing amendments by the Parliament of India and interpretations by the Hon'ble Supreme Court and High Courts. Users facing real cyber incidents should promptly contact law enforcement via <strong>1930</strong> or consult an advocate licensed with the Bar Council of India.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 10: ABOUT PROJECT & FACULTY EVALUATION DOSSIER -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Module 08 &bull; Academic Dossier</span>
+          <h2 class="section-title">About the Project & Professional Ethics</h2>
+          <p class="section-subtitle">
+            Documentation of project methodology, professional computing ethics under IEEE & ACM codes, and comprehensive evaluation scripts for college faculty review.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card">
+            <h3>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+              Project Scope & Objectives
+            </h3>
+            <p>
+              The primary objective of this micro-project is to bridge the critical pedagogical gap between software engineering skills and cyber law literacy. Computer science and engineering students frequently write software, manage databases, and administer servers without appreciating the statutory boundaries governing their trade.
+            </p>
+            <ul>
+              <li>Deconstruct complex legal text from the IT Act and Copyright Act into plain, accessible engineering explanations.</li>
+              <li>Instill ethical discipline regarding software piracy, license management, and open-source compliance.</li>
+              <li>Promote safe computing hygiene and incident readiness without requiring paid third-party dependencies.</li>
+            </ul>
+          </div>
+
+          <div class="about-card">
+            <h3>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              Professional Responsibilities (ACM & IEEE)
+            </h3>
+            <p>
+              Computing professionals hold immense societal trust. Under the <strong>ACM Code of Ethics</strong> and the <strong>IEEE Code of Ethics</strong>:
+            </p>
+            <ul>
+              <li><strong>Section 1.4:</strong> Be fair and take action not to discriminate or cause harm. Software professionals must ensure systems are not leveraged for malicious exploitation.</li>
+              <li><strong>Section 1.5:</strong> Respect the work required to produce new ideas, inventions, creative works, and computing artifacts (intellectual property adherence).</li>
+              <li><strong>Section 2.5:</strong> Give comprehensive and thorough evaluations of computer systems and their impacts, including analysis of possible risks and strict adherence to authorization boundaries.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Faculty Demonstration Script & Report Outline Box -->
+        <div class="faculty-section-box">
+          <div class="faculty-header">
+            <div>
+              <h3>College Faculty Evaluation & Viva Demonstration Guide</h3>
+              <p style="color:var(--text-muted); font-size:0.9rem;">Recommended 5-minute interactive walkthrough sequence for internal/external examiners.</p>
+            </div>
+            <span style="background:rgba(6,182,212,0.15); color:var(--accent-cyan-light); font-weight:700; font-size:0.8rem; padding:0.4rem 0.8rem; border-radius:var(--radius-sm); border:1px solid rgba(6,182,212,0.3);">
+              Viva Ready
+            </span>
+          </div>
+
+          <div class="viva-step-list">
+            <div class="viva-step-item">
+              <div class="viva-step-title">
+                <span>Step 1: Introduction & Statutory Verification (1 Minute)</span>
+              </div>
+              <div class="viva-step-desc">
+                Present the home page hero section and verified NCRB 2022 statistics. Demonstrate the live search bar by typing <code>"66"</code> or <code>"piracy"</code> to showcase real-time multi-criteria filtering across IT Act and Copyright Act sections with live India Code links.
+              </div>
+            </div>
+
+            <div class="viva-step-item">
+              <div class="viva-step-title">
+                <span>Step 2: Civil vs Criminal Distinction & Taxonomy (1 Minute)</span>
+              </div>
+              <div class="viva-step-desc">
+                Navigate to Module 01 and 02. Highlight the ethical hacking callout explaining why authorization is the legal boundary. Present the comparison table highlighting the fundamental differences between Section 43 civil compensation (up to ₹5 Crore before the Adjudicating Officer) and Section 66 criminal penal liability.
+              </div>
+            </div>
+
+            <div class="viva-step-item">
+              <div class="viva-step-title">
+                <span>Step 3: Interactive Case Studies & Quiz Walkthrough (1.5 Minutes)</span>
+              </div>
+              <div class="viva-step-desc">
+                Demonstrate Case Study 01 (Campus Torrent) or Case Study 04 (Unsolicited College Portal Pentest). Select an option, click "Analyze & Check Legal Answer", and explain the statutory citations revealed. Answer 2-3 quiz questions to demonstrate the dynamic progress bar, scoring mechanism, and statutory rationales.
+              </div>
+            </div>
+
+            <div class="viva-step-item">
+              <div class="viva-step-title">
+                <span>Step 4: Simulated Incident Report & Evidence Hygiene (1 Minute)</span>
+              </div>
+              <div class="viva-step-desc">
+                Open Module 06 (Incident Simulator). Select an incident type (e.g. Phishing Attempt), demonstrate input validation against sensitive numbers, and generate the First Incident Triage Docket. Point out the print/save functionality, official government reporting numbers (1930 / cybercrime.gov.in), and clear local educational disclaimer.
+              </div>
+            </div>
+
+            <div class="viva-step-item">
+              <div class="viva-step-title">
+                <span>Step 5: Code Architecture & Standalone Portability (30 Seconds)</span>
+              </div>
+              <div class="viva-step-desc">
+                Conclude by demonstrating that the project is completely self-contained in clean HTML5, CSS3, and vanilla JavaScript without any paid API keys or runtime backend requirement. It runs smoothly on Windows 11 via VS Code Live Server or directly in any modern browser.
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>Statutory Provisions Against Piracy, Cyber Crimes and Hacking</h4>
+          <p>
+            An academic micro-project engineered for college legal awareness and professional computing ethics. Grounded in the Information Technology Act, 2000 and the Copyright Act, 1957.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Core Modules</h5>
+          <ul class="footer-links">
+            <li><a href="#categories">Cybercrime Categories</a></li>
+            <li><a href="#laws">Indian Cyber Laws</a></li>
+            <li><a href="#cases">Interactive Case Studies</a></li>
+            <li><a href="#quiz">Assessment Quiz</a></li>
+            <li><a href="#safety">Cyber Safety Guide</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Official Portals</h5>
+          <ul class="footer-links">
+            <li><a href="https://cybercrime.gov.in" target="_blank" rel="noopener noreferrer">Cybercrime Portal (1930)</a></li>
+            <li><a href="https://www.cert-in.org.in" target="_blank" rel="noopener noreferrer">CERT-In Nodal Agency</a></li>
+            <li><a href="https://www.indiacode.nic.in" target="_blank" rel="noopener noreferrer">India Code Repository</a></li>
+            <li><a href="https://ncrb.gov.in" target="_blank" rel="noopener noreferrer">NCRB India Publications</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Academic Micro-Project &bull; For Educational & Legal Awareness Use Only.
+        </div>
+        <div>
+          Last Verified Against Official India Code Gazette: 2026
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Vanilla JavaScript Application Engine -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+{
+  "name": "Statutory Provisions Against Piracy, Cyber Crimes and Hacking",
+  "description": "An interactive educational web platform on Indian statutory provisions under the IT Act 2000 and Copyright Act 1957 covering cybercrimes, hacking, digital piracy, case studies, quizzes, and safety guides.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
