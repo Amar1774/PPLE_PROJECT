@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Micro Project Report - Statutory Provisions Against Piracy, Cyber Crimes and Hacking</title>
+  <style>
+    /* Reset & Print Setup */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #525659;
+      font-family: "Times New Roman", Times, serif;
+      color: #000;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Top Control Bar (Hidden in Print) */
+    .no-print-bar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #0f172a;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+
+    .no-print-bar .title {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #38bdf8;
+    }
+
+    .no-print-bar .btn-group {
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+    }
+
+    .btn {
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      border: none;
+      transition: all 0.2s;
+    }
+
+    .btn-print {
+      background: #0284c7;
+      color: #fff;
+    }
+
+    .btn-print:hover {
+      background: #0369a1;
+    }
+
+    .btn-back {
+      background: #334155;
+      color: #f1f5f9;
+    }
+
+    .btn-back:hover {
+      background: #475569;
+    }
+
+    .customizer-box {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      font-size: 0.85rem;
+    }
+
+    .customizer-box input {
+      background: #1e293b;
+      border: 1px solid #475569;
+      color: #fff;
+      padding: 0.35rem 0.6rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+    }
+
+    /* A4 Document Pages */
+    .document-wrapper {
+      padding: 20px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      background: #fff;
+      padding: 20mm 18mm;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.35);
+      position: relative;
+      border: 1.5px solid #000;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .page-inner {
+      border: 1px solid #000;
+      height: 100%;
+      min-height: 255mm;
+      padding: 14mm 14mm;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Page Numbers */
+    .page-number {
+      position: absolute;
+      bottom: 8mm;
+      right: 14mm;
+      font-size: 11pt;
+      font-weight: normal;
+    }
+
+    /* Typography */
+    h1.doc-title {
+      font-size: 15pt;
+      font-weight: bold;
+      text-align: center;
+      line-height: 1.4;
+      margin: 15px 0 25px;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+
+    h2.section-heading {
+      font-size: 14pt;
+      font-weight: bold;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+      letter-spacing: 0.05em;
+    }
+
+    h3.sub-heading {
+      font-size: 12pt;
+      font-weight: bold;
+      margin: 14px 0 6px;
+    }
+
+    p {
+      font-size: 12pt;
+      text-align: justify;
+      margin-bottom: 12px;
+      line-height: 1.45;
+    }
+
+    /* Cover Page Elements */
+    .cover-top {
+      text-align: center;
+      font-size: 13pt;
+      margin-top: 15px;
+    }
+
+    .cover-sub {
+      text-align: center;
+      font-size: 11.5pt;
+      line-height: 1.5;
+      margin-bottom: 30px;
+    }
+
+    .cover-sub strong {
+      font-size: 12pt;
+      display: block;
+      margin: 4px 0;
+    }
+
+    .submission-row {
+      display: flex;
+      justify-content: space-between;
+      margin: 25px 35px 35px;
+      font-size: 12pt;
+      font-weight: bold;
+    }
+
+    .guidance-block {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 12pt;
+    }
+
+    .guidance-block strong {
+      font-size: 12.5pt;
+      display: block;
+      margin-top: 5px;
+    }
+
+    .logo-container {
+      text-align: center;
+      margin: 15px 0;
+    }
+
+    .logo-badge {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .logo-petals {
+      display: flex;
+      gap: 3px;
+      margin-bottom: 5px;
+    }
+
+    .petal {
+      width: 14px;
+      height: 24px;
+      border-radius: 50% 50% 0 0;
+    }
+
+    .p-green { background: #84cc16; }
+    .p-orange { background: #f97316; }
+    .p-yellow { background: #eab308; }
+
+    .logo-text-cmr {
+      font-size: 26pt;
+      font-weight: 900;
+      color: #1e3a8a;
+      letter-spacing: 2px;
+      font-family: Arial, sans-serif;
+      line-height: 1;
+    }
+
+    .logo-text-sub {
+      font-size: 7.5pt;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      color: #334155;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .college-block {
+      text-align: center;
+      font-size: 11.5pt;
+      margin-top: auto;
+      line-height: 1.4;
+    }
+
+    .college-block strong {
+      font-size: 13pt;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    /* Certificate Signatures */
+    .certificate-signatures {
+      display: flex;
+      justify-content: space-between;
+      margin-top: auto;
+      padding-top: 50px;
+      font-size: 11.5pt;
+    }
+
+    .signature-block {
+      text-align: center;
+    }
+
+    .signature-block strong {
+      display: block;
+      margin-top: 45px;
+    }
+
+    .examiner-signature {
+      text-align: center;
+      margin-top: 55px;
+      font-size: 11.5pt;
+    }
+
+    /* Tables */
+    table.doc-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+      font-size: 11pt;
+    }
+
+    table.doc-table th, table.doc-table td {
+      border: 1px solid #000;
+      padding: 8px 10px;
+      text-align: left;
+    }
+
+    table.doc-table th {
+      font-weight: bold;
+      text-align: center;
+    }
+
+    table.index-table td:first-child {
+      text-align: center;
+      width: 12%;
+    }
+
+    table.index-table td:last-child {
+      text-align: center;
+      width: 18%;
+    }
+
+    /* Lists */
+    ol.doc-list, ul.doc-list {
+      margin-left: 24px;
+      margin-bottom: 12px;
+      font-size: 12pt;
+    }
+
+    ol.doc-list li, ul.doc-list li {
+      margin-bottom: 8px;
+      text-align: justify;
+      line-height: 1.45;
+    }
+
+    /* Blockquote / Statutory extracts */
+    .statute-box {
+      border-left: 2px solid #000;
+      padding: 6px 12px;
+      margin: 8px 0 12px;
+      font-style: italic;
+      font-size: 11pt;
+      background: #fafafa;
+    }
+
+    /* Diagram Representation in Detailed Study */
+    .diagram-container {
+      border: 1px solid #000;
+      padding: 12px;
+      margin: 15px 0;
+      text-align: center;
+    }
+
+    .diagram-title {
+      font-weight: bold;
+      font-size: 11pt;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .diagram-boxes {
+      display: flex;
+      justify-content: space-around;
+      gap: 8px;
+    }
+
+    .diagram-col {
+      flex: 1;
+      border: 1px solid #000;
+      padding: 8px 4px;
+      font-size: 9.5pt;
+      background: #fff;
+    }
+
+    .diagram-col-header {
+      font-weight: bold;
+      border-bottom: 1px solid #000;
+      padding-bottom: 4px;
+      margin-bottom: 6px;
+      font-size: 10pt;
+    }
+
+    .diagram-item {
+      padding: 2px 0;
+      font-size: 9pt;
+      line-height: 1.3;
+    }
+
+    .fig-caption {
+      text-align: center;
+      font-style: italic;
+      font-size: 10.5pt;
+      margin-top: 8px;
+    }
+
+    /* Print Styles */
+    @media print {
+      body {
+        background: transparent;
+      }
+      .no-print-bar {
+        display: none !important;
+      }
+      .document-wrapper {
+        padding: 0;
+        gap: 0;
+      }
+      .page {
+        box-shadow: none;
+        margin: 0;
+        width: 100%;
+        min-height: 100vh;
+        page-break-after: always;
+        border: 1.5px solid #000;
+      }
+      @page {
+        size: A4;
+        margin: 12mm 10mm;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hidden in Print: Action Control Header -->
+  <div class="no-print-bar">
+    <div class="title">Academic Micro-Project Formal Report Viewer</div>
+    <div class="customizer-box">
+      <label for="inputName">Student Name:</label>
+      <input type="text" id="inputName" value="R.M.N Sai Prabhas" oninput="updateStudentDetails()" />
+      <label for="inputRoll">Roll No:</label>
+      <input type="text" id="inputRoll" value="23R01A67B6" oninput="updateStudentDetails()" />
+    </div>
+    <div class="btn-group">
+      <a href="index.html" class="btn btn-back">⬅ Back to Interactive Web App</a>
+      <button onclick="window.print()" class="btn btn-print">🖨️ Print / Save as PDF</button>
+    </div>
+  </div>
+
+  <div class="document-wrapper">
+
+    <!-- PAGE 1: COVER PAGE -->
+    <div class="page">
+      <div class="page-inner">
+        <div class="cover-top">
+          A<br />Micro Project report on
+        </div>
+
+        <h1 class="doc-title" style="margin-top: 25px;">
+          STATUTORY PROVISIONS AGAINST PIRACY, CYBER CRIMES AND HACKING
+        </h1>
+
+        <div class="cover-sub">
+          Submitted to the CMR Institute of Technology in partial fulfilment of the requirement of the<br />
+          <strong>PROFESSIONAL PRACTICE, LAW &amp; ETHICS LAB</strong>
+          <strong>IV-B. TECH I-SEMESTER</strong>
+          In<br />
+          Computer Science and Engineering (Data Science)
+        </div>
+
+        <div class="submission-row">
+          <div style="text-align: left;">
+            Submitted By<br /><br />
+            <span class="dyn-student-name">R.M.N Sai Prabhas</span>
+          </div>
+          <div style="text-align: right;">
+            <br /><br />
+            <span class="dyn-student-roll">23R01A67B6</span>
+          </div>
+        </div>
+
+        <div class="guidance-block">
+          Under the Guidance of<br />
+          <strong>Mrs K Swaroopa</strong>
+          (Assistant Professor, (H&amp;S))
+        </div>
+
+        <div class="logo-container">
+          <div class="logo-badge">
+            <div class="logo-petals">
+              <div class="petal p-green"></div>
+              <div class="petal p-orange"></div>
+              <div class="petal p-yellow"></div>
+              <div class="petal p-green"></div>
+              <div class="petal p-orange"></div>
+            </div>
+            <div class="logo-text-cmr">CMR</div>
+            <div class="logo-text-sub">GROUP OF INSTITUTIONS</div>
+            <div style="font-size:6pt; letter-spacing:1px; color:#555;">EXPLORE TO INVENT</div>
+          </div>
+        </div>
+
+        <div class="college-block">
+          <strong>CMR INSTITUTE OF TECHNOLOGY</strong>
+          (UGC AUTONOMOUS)<br />
+          (Approved by AICTE, Affiliated to JNTUH, Hyderabad)<br />
+          Kandlakoya, Medchal Road, Hyderabad-501401.<br />
+          <strong>2026-2027</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAGE 2: CERTIFICATE -->
+    <div class="page">
+      <div class="page-inner">
+        <div class="logo-container" style="margin-top: 5px;">
+          <div class="logo-badge">
+            <div class="logo-petals">
+              <div class="petal p-green"></div>
+              <div class="petal p-orange"></div>
+              <div class="petal p-yellow"></div>
+              <div class="petal p-green"></div>
+              <div class="petal p-orange"></div>
+            </div>
+            <div class="logo-text-cmr" style="font-size:20pt;">CMR</div>
+            <div class="logo-text-sub">GROUP OF INSTITUTIONS</div>
+            <div style="font-size:5.5pt; letter-spacing:1px; color:#555;">EXPLORE TO INVENT</div>
+          </div>
+        </div>
+
+        <div style="text-align: center; font-size: 11pt; line-height: 1.35; margin-bottom: 25px;">
+          <strong style="font-size: 12.5pt; display: block;">CMR INSTITUTE OF TECHNOLOGY</strong>
+          (UGC AUTONOMOUS)<br />
+          (Approved by AICTE, Affiliated to JNTUH, Hyderabad)<br />
+          Kandlakoya, Medchal Road, Hyderabad-501401.<br />
+          Computer Science and Engineering (Data Science)
+        </div>
+
+        <h2 class="section-heading" style="margin-top: 15px; margin-bottom: 30px;">CERTIFICATE</h2>
+
+        <p style="line-height: 1.8; font-size: 12pt;">
+          This is to certify that a Micro Project entitled with <strong>"Statutory Provisions Against Piracy, Cyber Crimes and Hacking"</strong> being submitted by
+        </p>
+
+        <div class="submission-row" style="margin: 20px 20px 30px;">
+          <div class="dyn-student-name">R.M.N Sai Prabhas</div>
+          <div class="dyn-student-roll">23R01A67B6</div>
+        </div>
+
+        <p style="line-height: 1.8; font-size: 12pt;">
+          In partial fulfilment of the requirement for completion of the <strong>“PROFESSIONAL PRACTICE, LAW &amp; ETHICS LAB”</strong> of IV-B.TECH I-semester of a bonafide work carried out under the guidance and supervision.
+        </p>
+
+        <div class="certificate-signatures">
+          <div class="signature-block">
+            <strong>Signature of Faculty</strong>
+            Mrs K Swaroopa<br />
+            (Assistant Professor,(H&amp;S))
+          </div>
+          <div class="signature-block">
+            <strong>Signature of HOD</strong>
+            Dr.M.Ravi<br />
+            (Head of Department,CSE(DS))
+          </div>
+        </div>
+
+        <div class="examiner-signature">
+          <strong>Signature of External Examiner</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAGE 3: ACKNOWLEDGEMENT -->
+    <div class="page">
+      <div class="page-inner">
+        <h2 class="section-heading" style="margin-top: 40px; margin-bottom: 40px;">ACKNOWLEDGEMENT</h2>
+
+        <p style="line-height: 1.8; font-size: 12pt;">
+          I am extremely grateful to <strong>Dr. M. Janga Reddy</strong>, Director, <strong>Dr. B. Satyanarayana</strong>, Principal and <strong>Dr. M. Ravi</strong>, Head of Department, Computer Science and Engineering (Data Science), CMR Institute of Technology for their inspiration and valuable guidance during the entire duration.
+        </p>
+
+        <p style="line-height: 1.8; font-size: 12pt;">
+          I am extremely thankful to <strong>Mrs K Swaroopa</strong>, Assistant Professor, (H&amp;S), CMR Institute of Technology for her constant guidance, encouragement and moral support throughout the project.
+        </p>
+
+        <p style="line-height: 1.8; font-size: 12pt;">
+          I express my thanks to all staff members and friends for all the help and coordination extended in bringing out this project successfully in time.
+        </p>
+
+        <div class="submission-row" style="margin-top: 60px; margin-left: 0; margin-right: 0;">
+          <div class="dyn-student-name">R.M.N Sai Prabhas</div>
+          <div class="dyn-student-roll">23R01A67B6</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAGE 4: INDEX -->
+    <div class="page">
+      <div class="page-inner">
+        <h2 class="section-heading" style="margin-top: 20px; margin-bottom: 25px;">INDEX</h2>
+
+        <table class="doc-table index-table">
+          <thead>
+            <tr>
+              <th scope="col">S.NO</th>
+              <th scope="col">CONTENTS</th>
+              <th scope="col">PAGE NO.</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Abstract</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Introduction</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Objective</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Need for the Study</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Literature Review</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Methodology</td>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Detailed Study</td>
+              <td>7-11</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>Importance</td>
+              <td>12</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>Observations</td>
+              <td>13</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>Applications</td>
+              <td>14</td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td>Conclusion</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td>References</td>
+              <td>16</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- PAGE 5: ABSTRACT (Page 1) -->
+    <div class="page">
+      <div class="page-inner">
+        <h2 class="section-heading">ABSTRACT</h2>
+
+        <p>
+          Cyberspace has emerged as the critical infrastructure of contemporary society, underpinning economic transactions, public administration, critical utilities, and interpersonal communication. However, the rapid proliferation of digital networks has concurrently stimulated sophisticated forms of digital misconduct, including software piracy, unauthorized system intrusions, phishing syndicates, identity theft, and corporate data exfiltration. In a knowledge-driven economy, data, computer programs, and algorithmic assets represent the most valuable intellectual property of individuals, enterprises, and nations, necessitating an authoritative statutory architecture to safeguard them.
+        </p>
+
+        <p>
+          This micro-project provides a comprehensive legal and technical analysis of <strong>Statutory Provisions Against Piracy, Cyber Crimes and Hacking</strong> under Indian jurisprudence. The study focuses primarily on the codified doctrines of the <strong>Information Technology Act, 2000</strong> (Act No. 21 of 2000) and the <strong>Copyright Act, 1957</strong> (Act No. 14 of 1957). For each category of cyber infraction, the report deconstructs the underlying technical mechanisms, governing statutory provisions, procedural forums, conditions of liability, and prescribed legal remedies. A comparative analysis is formulated to rigorously distinguish restorative civil compensation from criminal penal sanctions.
+        </p>
+
+        <p>
+          The study further examines contemporary developments, including the empirical trends documented in the National Crime Records Bureau (NCRB) Crime in India Reports, cybersecurity incident metrics handled by the Indian Computer Emergency Response Team (CERT-In), the legal dichotomy separating ethical security testing from unauthorized access, dynamic blocking injunctions against digital piracy mirrors, and the legal implications of artificial intelligence and deepfake identity theft. These developments demonstrate that cyber law is no longer a peripheral legal specialty; it is an indispensable competency for every software engineer, data scientist, and computing professional.
+        </p>
+
+        <p>
+          The project concludes that legal literacy regarding cyber law and copyright protection is both a professional necessity and an ethical imperative. Understanding statutory boundaries protects engineers from personal liability, ensures organizational resilience, respects intellectual property, and contributes to a secure and equitable digital society. This report is educational in nature and is not legal advice.
+        </p>
+
+        <p>
+          The report is organized as follows: the objective, need, and literature review set the background; the methodology explains how the study was carried out; the detailed study covers statutory provisions and emerging digital trends; and the remaining sections discuss the importance, observations, and applications of cyber law before concluding.
+        </p>
+
+        <div class="page-number">1</div>
+      </div>
+    </div>
+
+    <!-- PAGE 6: INTRODUCTION (Page 2) -->
+    <div class="page">
+      <div class="page-inner">
+        <h2 class="section-heading">INTRODUCTION</h2>
+
+        <p>
+          The transition toward a hyper-connected digital society has transformed the dynamics of global commerce and human interaction. Unlike physical tangible assets such as real estate or industrial machinery, creations in digital environments—software binaries, proprietary algorithms, databases, and electronic records—are intangible and can be duplicated, altered, or disseminated instantaneously at near-zero marginal cost. If computer resources and digital creative works could be compromised or copied with impunity, software developers and technology enterprises would possess little incentive to commit resources to technological research and development. Cyber law and intellectual property legislation resolve this vulnerability by granting enforceable exclusive rights, imposing civil liabilities, and penalizing malicious computer misuse.
+        </p>
+
+        <p>
+          The evolution of statutory frameworks governing computing technology evolved in distinct phases. Internationally, the United Nations Commission on International Trade Law (UNCITRAL) Model Law on Electronic Commerce (1996) provided the blueprint for legal recognition of electronic transactions. In the intellectual property sphere, the Berne Convention for the Protection of Literary and Artistic Works (1886) and the WTO Agreement on Trade-Related Aspects of Intellectual Property Rights (TRIPS, 1995) established that computer software must be accorded protection as literary works. In India, the Parliament enacted the <strong>Information Technology Act, 2000</strong> to provide legal recognition for electronic transactions, prevent computer crimes, and establish cyber regulatory mechanisms. This was comprehensively updated through the Information Technology (Amendment) Act, 2008 to address modern cyber offences. Concurrently, the <strong>Copyright Act, 1957</strong> provides civil and penal remedies against software piracy.
+        </p>
+
+        <p>
+          The core statutory violations examined in this project encompass: <strong>unauthorized access and data extraction</strong> (Section 43), <strong>computer-related offences and hacking</strong> (Section 66), <strong>identity theft</strong> (Section 66C), <strong>cheating by personation</strong> (Section 66D), <strong>violations against Critical Information Infrastructure</strong> (Section 70), and <strong>criminal copyright infringement of computer programmes</strong> (Sections 51, 63, and 63B of the Copyright Act).
+        </p>
+
+        <p>
+          In contemporary practice, cyber threats have grown increasingly asymmetric. The emergence of Ransomware-as-a-Service (RaaS), generative AI-enabled social engineering, automated credential stuffing, and digital piracy syndicates presents profound challenges to statutory enforcement. For computing students, code written, datasets processed, and server systems deployed represent potential legal liabilities; hence, comprehending statutory boundaries is a foundational requirement.
+        </p>
+
+        <p>
+          Cyber law is intrinsically coupled with professional ethics. Respecting third-party intellectual property, refusing to deploy unlicensed or cracked software, operating strictly within authorized penetration testing boundaries, and preserving user data confidentiality are ethical mandates reinforced by law.
+        </p>
+
+        <div class="page-number">2</div>
+      </div>
+    </div>
+
+    <!-- PAGE 7: OBJECTIVE (Page 3) -->
+    <div class="page">
+      <div class="page-inner">
+        <h2 class="section-heading">OBJECTIVE</h2>
+
+        <p>
+          The primary objective of this micro-project is to systematically analyze the statutory provisions governing digital piracy, cybercrimes, and hacking under Indian law, and to evaluate their implications for professional engineering practice and computing ethics.
+        </p>
+
+        <p><strong>Specific Objectives:</strong></p>
+
+        <ol class="doc-list">
+          <li>To examine the legislative purpose, historical development, and statutory scope of the Information Technology Act, 2000 and the Copyright Act, 1957 in governing electronic spaces and computer resources.</li>
+          <li>To deconstruct specific statutory sections—including Sections 43, 43A, 66, 66C, 66D, and 70 of the IT Act, and Sections 14, 51, 52, 63, and 63B of the Copyright Act—defining their elements of offence, legal procedures, and prescribed penalties.</li>
+          <li>To formulate a rigorous parametric comparison distinguishing civil liability (reparative compensation before Adjudicating Officers) from criminal offences (penal prosecution before Judicial Magistrates).</li>
+          <li>To define the critical legal distinction between authorized ethical security testing (penetration testing) and unlawful computer intrusion, emphasizing authorization and scope.</li>
+          <li>To evaluate practical fictional case scenarios involving campus software piracy, corporate data theft, phishing deception, unauthorized port scanning, and digital impersonation.</li>
+          <li>To examine contemporary empirical trends from the National Crime Records Bureau (NCRB) and CERT-In advisories, highlighting the practical responsibilities of software engineers.</li>
+        </ol>
+
+        <div class="page-number">3</div>
+      </div>
+    </div>
+
+    <!-- PAGE 8: NEED FOR THE STUDY (Page 4) -->
+    <div class="page">
+      <div class="page-inner">
+        <h2 class="section-heading">NEED FOR THE STUDY</h2>
+
+        <p>
+          Computer systems, cloud services, and proprietary software have become the operational lifeblood of modern society. From emerging technology startups and research centers to banking institutions and public infrastructure, organizations depend entirely on secure digital systems. A thorough understanding of cyber laws is therefore mandatory for every individual tasked with building, securing, or administering software systems.
+        </p>
+
+        <p>
+          Despite this reality, empirical awareness of cyber law remains remarkably deficient among engineering students and novice technology practitioners. This educational deficit frequently manifests in casual infractions: utilizing torrent networks to download cracked CAD and development suites, ignoring open-source license restrictions, failing to implement data security hygiene on corporate databases, or executing unauthorized penetration tests against academic or commercial portals under the mistaken belief that "good intentions" confer immunity. Such oversights carry severe legal ramifications, including civil claims for damages, criminal prosecution, expulsion, and permanent reputational damage.
+        </p>
+
+        <p>
+          The threat environment is simultaneously undergoing rapid transformation. The advent of AI-driven social engineering, automated vulnerability scanning, deepfake impersonation, and offshore piracy mirrors has generated jurisdictional dilemmas that traditional legal doctrines struggled to anticipate. NCRB reports document an annual increase in cybercrime registrations exceeding 24%, with the vast majority driven by financial fraud and personation.
+        </p>
+
+        <p>
+          For these reasons, a consolidated academic study of statutory provisions against piracy, cybercrimes, and hacking is vital. It establishes foundational legal awareness, cultivates compliance with professional codes of conduct, and prepares prospective engineers to defend organizational assets while strictly respecting intellectual property rights.
+        </p>
+
+        <p>
+          The study is equally vital for career preparation. Computer science graduates regularly interact with confidential enterprise source code, customer personal data, and proprietary algorithms. Understanding statutory limits ensures they do not breach employment non-disclosure covenants or commit civil data theft under Section 43 of the IT Act.
+        </p>
+
+        <div class="page-number">4</div>
+      </div>
+    </div>
+
+    <!-- PAGE 9: LITERATURE REVIEW (Page 5) -->
+    <div class="page">
+      <div class="page-inner">
+        <h2 class="section-heading">LITERATURE REVIEW</h2>
+
+        <p>
+          The academic foundations of cyber jurisprudence and software protection are anchored in international conventions and comparative treatises. The <strong>UNCITRAL Model Law on Electronic Commerce (1996)</strong> established the principle of functional equivalence between paper and electronic documents, which formed the legislative foundation for India's IT Act. In software protection, the <strong>TRIPS Agreement (1995)</strong> mandated under Article 10 that computer programs, whether in source code or object code, must be protected as literary works under the Berne Convention.
+        </p>
+
+        <p>
+          In India, the primary statutory enactments are the <strong>Information Technology Act, 2000</strong> (Act 21 of 2000), as amended by Act 10 of 2009, and the <strong>Copyright Act, 1957</strong> (Act 14 of 1957), amended substantially in 1994 and 2012. Standard legal authorities—including <em>Cyber Law in India</em> by Dr. Pavan Duggal and <em>Commentary on Information Technology Act</em> by Justice Yatindra Singh—provide exhaustive analyses of statutory provisions.
+        </p>
+
+        <p>
+          Judicial precedents have critically defined the scope of these statutes. In <strong>Shreya Singhal v. Union of India (2015)</strong>, the Supreme Court emphasized constitutional standards in electronic speech while upholding penal provisions targeting digital cheating. In <strong>State of Tamil Nadu v. Suhas Katti (2004)</strong>, Indian courts achieved the first landmark conviction under Section 67 for cyber harassment, demonstrating the evidentiary value of electronic records. In <strong>UTV Software Communication Ltd. v. 1337x.to (2019)</strong>, the Delhi High Court pioneered "dynamic injunctions" to combat mirror piracy websites distributing infringing digital content.
+        </p>
+
+        <p>
+          Policy reports and empirical literature include the annual <strong>Crime in India Reports</strong> published by the National Crime Records Bureau (NCRB), the <strong>CERT-In Annual Cyber Security Tracking</strong> by the Ministry of Electronics and Information Technology (MeitY), and the <strong>Law Commission of India Report No. 289 (2024)</strong> on trade secrets.
+        </p>
+
+        <p>
+          The literature establishes that while India possesses a robust statutory architecture, effective implementation requires high civic literacy, strict adherence to digital evidence handling under Section 65B of the Indian Evidence Act / Bharatiya Sakshya Adhiniyam, and continuous curriculum integration in engineering faculties.
+        </p>
+
+        <div class="page-number">5</div>
+      </div>
+    </div>
+
+    <!-- PAGE 10: METHODOLOGY (Page 6) -->
+    <div class="page">
+      <div class="page-inner">
+        <h2 class="section-heading">METHODOLOGY</h2>
+
+        <p>
+          This micro-project follows an analytical, qualitative, and descriptive research approach based on primary statutory texts, official regulatory notifications, and authoritative secondary legal literature. The procedural methodology was executed across six systematic phases:
+        </p>
+
+        <ol class="doc-list">
+          <li><strong>Statutory Text Collection &amp; Verification:</strong> Primary statutory provisions were retrieved directly from official legislative repositories of the Government of India via the official India Code portal (<em>indiacode.nic.in</em>) for Act No. 21 of 2000 (IT Act) and Act No. 14 of 1957 (Copyright Act).</li>
+          <li><strong>Offence Taxonomy &amp; Categorization:</strong> Cyber infractions were classified into seven distinct empirical categories: unauthorized access, hacking, phishing, identity theft, online impersonation, data exfiltration, and software piracy.</li>
+          <li><strong>Doctrinal Legal Analysis:</strong> Each statutory provision was deconstructed under standard legal criteria: elements of offence (<em>actus reus</em>), required mental culpability (<em>mens rea</em>), procedural forum, and prescribed civil or criminal penalties.</li>
+          <li><strong>Parametric Comparative Tabulation:</strong> A comparative matrix was formulated to clearly contrast civil liability against criminal offences across parameters including standard of proof, forum, and remedies.</li>
+          <li><strong>Empirical &amp; Fictional Case Synthesis:</strong> Five realistic fictional scenarios were designed to simulate real-world dilemmas faced by engineering students, followed by judicial evaluations and educational limitation disclosures.</li>
+          <li><strong>Digital Implementation:</strong> To maximize educational utility, the findings were converted into an interactive, zero-dependency client-side platform featuring interactive search, quizzes, and incident triage simulators.</li>
+        </ol>
+
+        <p><strong>Scope and Limitation:</strong> No empirical field survey or criminal case tracking was conducted. The project is strictly educational and does not constitute formal legal counsel. Statutory provisions reflect verified text as published in official gazettes.</p>
+
+        <div class="page-number">6</div>
+      </div>
+    </div>
+
+    <!-- PAGE 11: DETAILED STUDY (Page 7) -->
+    <div class="page">
+      <div class="page-inner">
+        <h2 class="section-heading">DETAILED STUDY</h2>
+
+        <h3 class="sub-heading">1. Statutory Architecture of Indian Cyber Law</h3>
+        <p>
+          The statutory regime combating digital misconduct in India is bifurcated into two primary enactments: the <strong>Information Technology Act, 2000</strong>, which provides the penal and civil structure for computer misuse, and the <strong>Copyright Act, 1957</strong>, which protects proprietary software against unauthorized reproduction, cracking, and commercial distribution.
+        </p>
+
+        <div class="diagram-container">
+          <div class="diagram-title">Fig. 1: Classification of Cybercrimes &amp; Statutory Provisions in India</div>
+          <div class="diagram-boxes">
+            <div class="diagram-col">
+              <div class="diagram-col-header">Civil Infractions (IT Act)</div>
+              <div class="diagram-item">Sec 43(a): Unauthorized Access</div>
+              <div class="diagram-item">Sec 43(b): Data Extraction</div>
+              <div class="diagram-item">Sec 43(c): Malware Injection</div>
+              <div class="diagram-item">Sec 43A: Corporate Negligence</div>
+              <div class="diagram-item">Forum: Adjudicating Officer</div>
+            </div>
+            <div class="diagram-col">
+              <div class="diagram-col-header">Criminal Offences (IT Act)</div>
+              <div class="diagram-item">Sec 66: Hacking / Dishonest Acts</div>
+              <div class="diagram-item">Sec 66C: Identity Theft</div>
+              <div class="diagram-item">Sec 66D: Cheating by Personation</div>
+              <div class="diagram-item">Sec 70: Protected Systems (CII)</div>
+              <div class="diagram-item">Forum: Judicial Magistrate</div>
+            </div>
+            <div class="diagram-col">
+              <div class="diagram-col-header">Software Piracy (Copyright Act)</div>
+              <div class="diagram-item">Sec 14: Software as Literary Work</div>
+              <div class="diagram-item">Sec 51: Infringing Reproduction</div>
+              <div class="diagram-item">Sec 52(1)(aa): Backup Exemption</div>
+              <div class="diagram-item">Sec 63: Criminal Infringement</div>
+              <div class="diagram-item">Sec 63B: Knowing Use on Computer</div>
+            </div>
+          </div>
+          <div class="fig-caption">Fig. 1: Structural Taxonomy of Cyber Legislation in India</div>
+        </div>
+
+        <h3 class="sub-heading">2. Detailed Breakdown of Core Statutory Provisions</h3>
+
+        <p><strong>a) Section 43, Information Technology Act, 2000 (Civil Liability)</strong></p>
+        <div class="statute-box">
+          "If any person without permission of the owner or any other person who is incharge of a computer, computer system or computer network accesses, downloads, copies, introduces any computer contaminant, damages, disrupts or denies access... he shall be liable to pay damages by way of compensation to the person so affected."
+        </div>
+        <p>
+          Section 43 establishes civil strict liability for unauthorized computer access, data downloading, virus dissemination, and denial of service. The primary objective is restitution rather than punitive incarceration. Claims under Section 43 are adjudicated by the IT Adjudicating Officer (Secretary of IT) under Section 46, with compensation authority up to ₹5 Crore.
+        </p>
+
+        <div class="page-number">7</div>
+      </div>
+    </div>
+
+    <!-- PAGE 12: DETAILED STUDY Contd. (Page 8) -->
+    <div class="page">
+      <div class="page-inner">
+        <h3 class="sub-heading">b) Section 66, IT Act, 2000 (Computer Related Offences / Hacking)</h3>
+        <div class="statute-box">
+          "If any person, dishonestly or fraudulently, does any act referred to in section 43, he shall be punishable with imprisonment for a term which may extend to three years or with fine which may extend to five lakh rupees or with both."
+        </div>
+        <p>
+          Section 66 serves as the primary criminal penal provision for computer intrusion and hacking in India. It links directly to the physical acts enumerated in Section 43, converting them into cognizable criminal offences when accompanied by criminal intention—specifically acting <em>"dishonestly"</em> or <em>"fraudulently"</em> as defined in the penal code. The prescribed punishment is imprisonment extending up to 3 years, a fine up to ₹5,00,000, or both.
+        </p>
+
+        <h3 class="sub-heading">c) Section 66C, IT Act, 2000 (Punishment for Identity Theft)</h3>
+        <div class="statute-box">
+          "Whoever, fraudulently or dishonestly make use of the electronic signature, password or any other unique identification feature of any other person, shall be punished with imprisonment of either description for a term which may extend to three years and shall also be liable to fine which may extend to one lakh rupees."
+        </div>
+        <p>
+          Section 66C addresses the widespread theft and misuse of digital credentials, including stolen account passwords, cryptographic digital signature certificates (DSC), biometric identifiers, and session tokens. Penalties include imprisonment up to 3 years and a fine up to ₹1,00,000.
+        </p>
+
+        <h3 class="sub-heading">d) Section 66D, IT Act, 2000 (Cheating by Personation Using Computer Resource)</h3>
+        <div class="statute-box">
+          "Whoever, by means of any computer resource or communication device cheats by personating, shall be punished with imprisonment of either description for a term which may extend to three years and shall also be liable to fine which may extend to one lakh rupees."
+        </div>
+        <p>
+          Section 66D criminalizes online impersonation, deceptive phishing portals, spoofed banking SMS alerts, and counterfeit social media accounts deployed to defraud victims. It carries imprisonment up to 3 years and a fine up to ₹1,00,000. NCRB data indicates that Section 66D represents the single most frequently registered cybercrime provision in India, accounting for nearly 70% of reported incidents.
+        </p>
+
+        <h3 class="sub-heading">e) Section 70, IT Act, 2000 (Protected Systems &amp; Critical Infrastructure)</h3>
+        <p>
+          Section 70 empowers the Government to notify any computer system directly affecting Critical Information Infrastructure (CII)—such as power grids, nuclear facilities, defence communications, air traffic control, and national banking clearinghouses—as a "Protected System." Any unauthorized access or attempt to access a protected system carries severe criminal punishment of imprisonment extending up to 10 years and a fine.
+        </p>
+
+        <div class="page-number">8</div>
+      </div>
+    </div>
+
+    <!-- PAGE 13: DETAILED STUDY Contd. (Page 9) -->
+    <div class="page">
+      <div class="page-inner">
+        <h3 class="sub-heading">3. Statutory Provisions Governing Software Piracy (Copyright Act, 1957)</h3>
+
+        <p>
+          Under Indian jurisprudence, computer software is safeguarded under intellectual property law rather than physical property statutes. The primary provisions include:
+        </p>
+
+        <p><strong>a) Section 14 &amp; Section 51 (Exclusive Rights &amp; Infringement)</strong></p>
+        <p>
+          Section 14(b) defines copyright in computer programs as the exclusive right to reproduce the work, make adaptations, sell, or give on commercial rental any copy of the computer program. Section 51 provides that copyright is infringed whenever any individual, without a license from the copyright owner, exercises these exclusive rights or permits for profit any place to be used for public communication of infringing copies.
+        </p>
+
+        <p><strong>b) Section 52(1)(aa)-(ad) (Statutory Exemptions / Fair Dealing in Software)</strong></p>
+        <p>
+          Section 52 codifies crucial safe harbors for developers and users. Specifically, Section 52(1)(aa) exempts the making of copies or adaptation of a computer programme by the <em>lawful possessor</em> of a copy purely to utilize the program for the intended purpose or to maintain a temporary backup against destruction or loss. Section 52(1)(ab) permits reverse engineering strictly necessary to achieve interoperability with other programs.
+        </p>
+
+        <p><strong>c) Section 63 (Criminal Copyright Infringement)</strong></p>
+        <div class="statute-box">
+          "Any person who knowingly infringes or abets the infringement of the copyright in a work... shall be punishable with imprisonment for a term which shall not be less than six months but which may extend to three years and with fine which shall not be less than fifty thousand rupees but which may extend to two lakh rupees."
+        </div>
+        <p>
+          Section 63 establishes criminal penalties for software piracy. Crucially, copyright infringement under Section 63 has been interpreted by the Supreme Court as a cognizable and non-bailable offence, granting police officers statutory authority under Section 64 to seize infringing copies, servers, and duplication apparatus without a warrant.
+        </p>
+
+        <p><strong>d) Section 63B (Knowing Use of Infringing Software on a Computer)</strong></p>
+        <div class="statute-box">
+          "Any person who knowingly makes use on a computer of an infringing copy of a computer programme shall be punishable with imprisonment for a term which shall not be less than seven days but which may extend to three years and with fine which shall not be less than fifty thousand rupees but which may extend to two lakh rupees."
+        </div>
+        <p>
+          Section 63B is unique in targeting end-users who run cracked software binaries on workstations, even if they did not personally crack or sell the software.
+        </p>
+
+        <div class="page-number">9</div>
+      </div>
+    </div>
+
+    <!-- PAGE 14: DETAILED STUDY Contd. (Page 10) -->
+    <div class="page">
+      <div class="page-inner">
+        <h3 class="sub-heading">4. Comparative Analysis: Civil Liability vs. Criminal Offences</h3>
+
+        <p>
+          A central mandate of legal literacy is distinguishing restorative civil compensation from criminal penal prosecution across cyber infractions:
+        </p>
+
+        <table class="doc-table">
+          <thead>
+            <tr>
+              <th scope="col" style="width:22%;">Parameter</th>
+              <th scope="col" style="width:39%;">Civil Liability (IT Act Sec 43)</th>
+              <th scope="col" style="width:39%;">Criminal Offence (IT Act Sec 66 / Copyright Sec 63)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Primary Objective</strong></td>
+              <td>Compensation and restitution for wrongful financial loss caused to the victim.</td>
+              <td>Punishment and societal deterrence through imprisonment and state fines.</td>
+            </tr>
+            <tr>
+              <td><strong>Adjudicating Forum</strong></td>
+              <td>IT Adjudicating Officer appointed under Section 46 (Secretary of IT).</td>
+              <td>Court of Judicial Magistrate of First Class / Metropolitan Magistrate / Sessions Court.</td>
+            </tr>
+            <tr>
+              <td><strong>Standard of Proof</strong></td>
+              <td>Preponderance of probabilities (balance of evidence).</td>
+              <td>Proof beyond all reasonable doubt.</td>
+            </tr>
+            <tr>
+              <td><strong>Mental State (Mens Rea)</strong></td>
+              <td>Strict liability or negligence; dishonest criminal intent is not mandatory.</td>
+              <td>Mandatory requirement of <em>dishonest</em> or <em>fraudulent</em> intent.</td>
+            </tr>
+            <tr>
+              <td><strong>Sanctions</strong></td>
+              <td>Compensatory damages paid to victim (up to ₹5 Crore under Section 43).</td>
+              <td>Imprisonment (up to 3 or 10 years) plus fines deposited in the State Treasury.</td>
+            </tr>
+            <tr>
+              <td><strong>Police Authority</strong></td>
+              <td>No police arrest; resolved via civil adjudication petition.</td>
+              <td>Police investigation, seizure of equipment, and cognizable arrest.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="fig-caption">Table 1: Parametric Comparison of Civil and Criminal Cyber Provisions</div>
+
+        <h3 class="sub-heading">5. The Ethical Hacking Legal Boundary: Authorization &amp; Scope</h3>
+        <p>
+          A prevalent misconception among engineering students is that vulnerability testing is inherently legal if motivated by benevolent intentions. Under Section 43 and Section 66 of the IT Act, <strong>the sole statutory determinant separating ethical security testing from criminal hacking is prior written authorization and scope</strong>. Launching scanners or attempting SQL injection against systems without explicit authorization constitutes an actionable infraction regardless of academic intent.
+        </p>
+
+        <div class="page-number">10</div>
+      </div>
+    </div>
+
+    <!-- PAGE 15: DETAILED STUDY Contd. (Page 11) -->
+    <div class="page">
+      <div class="page-inner">
+        <h3 class="sub-heading">6. Emerging Trends in Cybercrimes and Digital Enforcement</h3>
+
+        <p><strong>a) Alarming Surge in Registered Cybercrimes</strong></p>
+        <p>
+          According to the National Crime Records Bureau (NCRB) <em>Crime in India 2022 Report</em>, a total of 65,893 cybercrime cases were registered nationwide, marking an increase of 24.4% compared to 2021 (52,974 cases). Analysis reveals that 69.8% of these cases were motivated by financial fraud and cheating (Section 66D), followed by sexual exploitation (8.6%) and extortion (5.6%).
+        </p>
+
+        <p><strong>b) Generative AI, Deepfakes, and Identity Theft</strong></p>
+        <p>
+          The proliferation of deep learning voice synthesis and image generation tools has intensified digital impersonation offences under Section 66C and Section 66D. High Courts have stepped in to enforce personality rights and protect public likenesses against unauthorized synthetic exploitation (e.g. <em>Anil Kapoor v. Simply Life India, 2023</em>).
+        </p>
+
+        <p><strong>c) Judicial Countermeasures: Dynamic Blocking Injunctions</strong></p>
+        <p>
+          In response to offshore piracy networks operating mirror and redirect domains, Indian High Courts have instituted "dynamic injunctions" (pioneered in <em>UTV Software Communication Ltd. v. 1337x.to, 2019</em>). Rather than requiring separate lawsuits for each mirror domain, rights-holders can notify the court-appointed Joint Registrar to extend domain-blocking orders automatically across new infringing mirrors.
+        </p>
+
+        <p><strong>d) Ransomware-as-a-Service (RaaS) and Supply Chain Vectors</strong></p>
+        <p>
+          Modern cybercriminal enterprises operate modular extortion campaigns targeting healthcare, energy, and educational networks. CERT-In's mandatory cyber incident directives mandate that critical cybersecurity incidents—including ransomware infections, unauthorized system modifications, and data leaks—must be reported to CERT-In within strict timeframes.
+        </p>
+
+        <p><strong>e) Malware Risks Inherent in Cracked Software</strong></p>
+        <p>
+          Cybersecurity analyses demonstrate that over 60% of cracked software executables, keygens, and patchers downloaded from torrent networks contain malicious payloads—including RedLine infostealers, cryptominers, and backdoor trojans. Software piracy thus functions as an initial-access vector for catastrophic cyber intrusions.
+        </p>
+
+        <div class="page-number">11</div>
+      </div>
+    </div>
+
+    <!-- PAGE 16: IMPORTANCE (Page 12) -->
+    <div class="page">
+      <div class="page-inner">
+        <h2 class="section-heading">IMPORTANCE</h2>
+
+        <p>
+          <strong>Protects Digital Assets and Commercial Viability:</strong> Digital innovations—including proprietary software, predictive neural network models, and databases—require immense financial and intellectual capital. Statutory protections assure technology creators that their work cannot be pirated or compromised with impunity, fostering sustained technological investment.
+        </p>
+
+        <p>
+          <strong>Establishes Clear Legal Recourse:</strong> Codified statutes provide structured civil and criminal avenues for victims. Individuals and organizations subjected to unauthorized access or piracy can petition Adjudicating Officers for compensation under Section 43 or initiate criminal prosecutions under Section 66 and Copyright Section 63.
+        </p>
+
+        <p>
+          <strong>Safeguards Critical National Infrastructure:</strong> By prescribing severe penalties (up to 10 years imprisonment under Section 70), cyber law establishes deterrence protecting power grids, banking telecommunications, air traffic controls, and nuclear facilities from catastrophic cyber terrorism and warfare.
+        </p>
+
+        <p>
+          <strong>Fosters Compliance with Global Trade Standards:</strong> Alignment with the TRIPS Agreement and international cyber norms ensures that Indian software firms and IT service providers are recognized as trustworthy trading partners in the global economy.
+        </p>
+
+        <p>
+          <strong>Reinforces Professional Computing Ethics:</strong> Cyber law defines the statutory boundaries within which computer engineers must operate. It informs practitioners about the necessity of software asset management, respecting open-source licenses, adhering to confidentiality non-disclosure agreements, and rejecting pirated tools.
+        </p>
+
+        <p>
+          <strong>Balances Exclusive Rights with Public Welfare:</strong> Fair dealing exemptions under Section 52 of the Copyright Act ensure that statutory protections do not stifle academic research, education, interoperability testing, or personal security backups.
+        </p>
+
+        <div class="page-number">12</div>
+      </div>
+    </div>
+
+    <!-- PAGE 17: OBSERVATIONS (Page 13) -->
+    <div class="page">
+      <div class="page-inner">
+        <h2 class="section-heading">OBSERVATIONS</h2>
+
+        <p>The investigation and synthesis of statutory provisions yielded the following findings:</p>
+
+        <ol class="doc-list">
+          <li><strong>Bifurcated Nature of Statutory Recourse:</strong> The legal system intentionally separates monetary recovery (Section 43 civil adjudication) from societal punishment (Section 66 criminal proceedings). Victims seeking financial recovery must utilize civil mechanisms rather than expecting criminal courts to award compensation.</li>
+          <li><strong>The Centrality of Authorization:</strong> Ethical security testing and criminal hacking utilize identical technical tooling (e.g. port scanners, fuzzers, exploit frameworks). The sole legal differentiator recognized by Indian jurisprudence is prior written consent and defined scope.</li>
+          <li><strong>Widespread End-User Liability under Copyright Law:</strong> Section 63B of the Copyright Act imposes direct criminal liability on individuals knowingly running cracked software on computers, debunking the misconception that only commercial distributors face prosecution.</li>
+          <li><strong>Dominance of Social Engineering Infractions:</strong> NCRB empirical data reveals that technical system breaches (hacking per se) are far less frequent than social engineering and personation fraud (Section 66D), highlighting the vulnerability of the human element.</li>
+          <li><strong>Technological Pace Outstripping Codified Law:</strong> The rapid emergence of deepfake media, automated AI phishing, and autonomous malware agents tests the interpretive boundaries of provisions drafted in 2000 and 2008.</li>
+          <li><strong>Critical Evidentiary Standards:</strong> Prosecuting cybercrimes requires meticulous compliance with digital evidence preservation standards (Section 65B electronic record certificates), without which digital logs are inadmissible.</li>
+          <li><strong>The Academic Awareness Gap:</strong> Engineering students frequently exhibit advanced technical skills alongside minimal awareness of statutory liabilities, demonstrating an urgent need for dedicated cyber law and ethics education.</li>
+        </ol>
+
+        <div class="page-number">13</div>
+      </div>
+    </div>
+
+    <!-- PAGE 18: APPLICATIONS (Page 14) -->
+    <div class="page">
+      <div class="page-inner">
+        <h2 class="section-heading">APPLICATIONS</h2>
+
+        <p>The statutory principles investigated in this project apply across numerous operational domains:</p>
+
+        <p><strong>1. Enterprise Software Engineering &amp; IT Governance:</strong></p>
+        <p>
+          Enforcing software asset management (SAM) systems ensures corporate environments remain compliant with Copyright Section 63B, shielding executives from vicarious criminal liability for unlicensed software installed on employee workstations.
+        </p>
+
+        <p><strong>2. Defensive Cybersecurity Operations (SOC &amp; Incident Response):</strong></p>
+        <p>
+          Security Operations Center (SOC) teams utilize statutory classifications to triage network intrusions, maintain evidentiary chains of custody during data breaches, and fulfill mandatory 6-hour incident reporting requirements to CERT-In under Section 70B.
+        </p>
+
+        <p><strong>3. Regulated Penetration Testing &amp; Bug Bounty Programs:</strong></p>
+        <p>
+          Cybersecurity researchers operate within structured Rules of Engagement (RoE) and Vulnerability Disclosure Programs (VDPs), ensuring testing remains authorized and immune from Section 43/66 prosecutions.
+        </p>
+
+        <p><strong>4. Corporate Trade Secret &amp; Data Protection:</strong></p>
+        <p>
+          Organizations leverage Section 43(b) alongside Non-Disclosure Agreements (NDAs) to deter departing employees from exfiltrating proprietary customer databases, machine learning weights, or algorithms to competitors.
+        </p>
+
+        <p><strong>5. Digital Rights Management &amp; Media Protection:</strong></p>
+        <p>
+          Entertainment and gaming companies utilize Section 51 and 63 alongside dynamic injunctions to obtain expedited judicial blocking orders against unauthorized torrent indexers and stream-ripping services.
+        </p>
+
+        <p><strong>6. Consumer Banking Fraud Prevention:</strong></p>
+        <p>
+          Financial institutions coordinate with law enforcement and telecom providers under Section 66D and the National Cybercrime Portal (Helpline 1930) to freeze stolen funds transferred via phishing gateways.
+        </p>
+
+        <div class="page-number">14</div>
+      </div>
+    </div>
+
+    <!-- PAGE 19: CONCLUSION (Page 15) -->
+    <div class="page">
+      <div class="page-inner">
+        <h2 class="section-heading">CONCLUSION</h2>
+
+        <p>
+          Statutory provisions against piracy, cybercrimes, and hacking form the essential legal backbone of our modern technological ecosystem. The Information Technology Act, 2000 and the Copyright Act, 1957 provide a cohesive statutory framework that penalizes malicious intrusion, compensates victims of data theft, safeguards Critical Information Infrastructure, and protects proprietary software creations from illicit exploitation.
+        </p>
+
+        <p>
+          This study emphasizes that computing capability without legal and ethical consciousness poses substantial hazards to individuals and society. The sharp rise in cybercrimes, coupled with the weaponization of generative artificial intelligence, necessitates that prospective software engineers and data scientists cultivate rigorous legal compliance alongside technical proficiency.
+        </p>
+
+        <p><strong>Practical Recommendations for Computing Professionals:</strong></p>
+
+        <ul class="doc-list">
+          <li><strong>Mandatory Authorization for Security Testing:</strong> Never execute vulnerability scans, port probes, or penetration scripts without prior written consent and clear contractual scope from the asset owner.</li>
+          <li><strong>Strict Software Licensing Hygiene:</strong> Avoid cracked software, keygens, and warez distributions; utilize verified Free and Open-Source Software (FOSS) or legitimate commercial licenses to mitigate both legal exposure and malware infiltration.</li>
+          <li><strong>Rigorous Adherence to Data Protection Standards:</strong> Maintain robust data security practices to protect sensitive personal records, preventing corporate civil liability under Section 43A and upcoming data protection regulations.</li>
+          <li><strong>Proactive Digital Evidence Preservation:</strong> When handling cyber incidents, preserve volatile RAM dumps, firewall event logs, and RFC-compliant email headers to maintain evidentiary admissibility under Section 65B.</li>
+          <li><strong>Ethical Alignment with Professional Codes:</strong> Uphold the ACM and IEEE Codes of Ethics, ensuring software artifacts are designed for societal welfare and professional integrity.</li>
+        </ul>
+
+        <div class="page-number">15</div>
+      </div>
+    </div>
+
+    <!-- PAGE 20: REFERENCES (Page 16) -->
+    <div class="page">
+      <div class="page-inner">
+        <h2 class="section-heading">REFERENCES</h2>
+
+        <ol class="doc-list" style="font-size: 11pt; line-height: 1.55;">
+          <li>Government of India, <em>The Information Technology Act, 2000</em> (Act No. 21 of 2000), as amended by the Information Technology (Amendment) Act, 2008 (Act No. 10 of 2009). Official India Code: indiacode.nic.in/handle/123456789/1999.</li>
+          <li>Government of India, <em>The Copyright Act, 1957</em> (Act No. 14 of 1957), as amended by the Copyright (Amendment) Act, 2012 (Act No. 27 of 2012). Official India Code: indiacode.nic.in/handle/123456789/1367.</li>
+          <li>National Crime Records Bureau (NCRB), <em>Crime in India 2022: Statistics Volume II</em>, Ministry of Home Affairs, Government of India, New Delhi, 2023.</li>
+          <li>Indian Computer Emergency Response Team (CERT-In), <em>Cyber Security Incident Tracking &amp; Annual Reports</em>, Ministry of Electronics and Information Technology (MeitY), Government of India.</li>
+          <li>Supreme Court of India, <em>Shreya Singhal v. Union of India</em>, (2015) 5 SCC 1 (Judicial interpretation of electronic offences and fundamental rights).</li>
+          <li>High Court of Delhi, <em>UTV Software Communication Ltd. &amp; Ors. v. 1337x.to &amp; Ors.</em>, 2019 SCC OnLine Del 8002 (Pioneering dynamic blocking injunctions against digital piracy).</li>
+          <li>World Trade Organization (WTO), <em>Agreement on Trade-Related Aspects of Intellectual Property Rights (TRIPS)</em>, Article 10 (Computer Programs and Compilations of Data), 1994.</li>
+          <li>United Nations Commission on International Trade Law (UNCITRAL), <em>Model Law on Electronic Commerce with Guide to Enactment</em>, United Nations, Vienna, 1996.</li>
+          <li>Law Commission of India, <em>Report No. 289: Trade Secrets and Economic Espionage</em>, Government of India, 2024.</li>
+          <li>Duggal, Pavan, <em>Cyber Law: An Exhaustive Commentary on the Information Technology Act, 2000</em>, Universal Law Publishing, New Delhi.</li>
+          <li>Singh, Justice Yatindra, <em>Cyber Laws: A Guide to the Information Technology Act and Cyber Crimes</em>, Universal Law Publishing.</li>
+          <li>Ahuja, V. K., <em>Law Relating to Intellectual Property Rights</em>, 3rd ed., LexisNexis Butterworths Wadhwa, Nagpur.</li>
+          <li>Narayanan, P., <em>Intellectual Property Law</em>, 3rd ed., Eastern Law House, Kolkata.</li>
+          <li>Association for Computing Machinery (ACM), <em>ACM Code of Ethics and Professional Conduct</em>, ACM Council, 2018.</li>
+        </ol>
+
+        <div class="page-number">16</div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function updateStudentDetails() {
+      const name = document.getElementById("inputName").value || "R.M.N Sai Prabhas";
+      const roll = document.getElementById("inputRoll").value || "23R01A67B6";
+
+      document.querySelectorAll(".dyn-student-name").forEach(el => el.textContent = name);
+      document.querySelectorAll(".dyn-student-roll").forEach(el => el.textContent = roll);
+    }
+  </script>
+</body>
+</html>
